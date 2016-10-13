@@ -185,7 +185,7 @@ class LocalCargoContainerTask extends AbstractCargoContainerTask {
                 property(name: AbstractCargoContainerTask.CARGO_SERVLET_PORT, value: getPort())
 
                 if(getJvmArgs()) {
-                    ant.property(name: 'cargo.jvmargs', value: getJvmArgs())
+                    ant.property(name: 'cargo.start.jvmargs', value: getJvmArgs())
                 }
 
                 if(getLogLevel()) {

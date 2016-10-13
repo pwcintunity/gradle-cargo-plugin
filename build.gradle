@@ -14,12 +14,13 @@ apply plugin: 'idea'
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 apply plugin: 'github-pages'
+apply plugin: 'maven'
 
 def compatibilityVersion = 1.6
 sourceCompatibility = compatibilityVersion
 targetCompatibility = compatibilityVersion
 group = 'com.bmuschko'
-version = '2.2.3'
+version = '2.2.3a'
 
 repositories {
     mavenCentral()

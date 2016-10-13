@@ -31,8 +31,9 @@ class DefaultFileUtil implements FileUtil {
 
         String filename = file.canonicalPath
         int index = filename.lastIndexOf('.')
+        int slashIndex = filename.lastIndexOf('/')
 
-        if (index > 0) {
+        if (index > 0 && index > slashIndex) {
             return filename.substring(index + 1)
         }
 
