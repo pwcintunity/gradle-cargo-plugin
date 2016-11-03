@@ -20,7 +20,7 @@ def compatibilityVersion = 1.6
 sourceCompatibility = compatibilityVersion
 targetCompatibility = compatibilityVersion
 group = 'com.bmuschko'
-version = '2.2.3a'
+version = '2.2.3b'
 
 repositories {
     mavenCentral()

@@ -189,6 +189,7 @@ Within `cargo` you can define properties for remote containers in a closure name
 Within `cargo` you can define properties for local containers in a closure named `local`:
 
 * `jvmArgs`: The JVM arguments for a local container.
+* `jvmStartArgs`: The JVM arguments used when starting a local container.
 * `outputFile`: The log file of your local container (defaults to writing to the console).
 * `logFile`: The Cargo log file of your local container (defaults to writing to the console).
 * `logLevel`: The log level to run the container with (optional). The valid levels are `low`, `medium` and `high`.

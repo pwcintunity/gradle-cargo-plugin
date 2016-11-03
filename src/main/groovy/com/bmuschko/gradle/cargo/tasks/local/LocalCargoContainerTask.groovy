@@ -45,6 +45,13 @@ class LocalCargoContainerTask extends AbstractCargoContainerTask {
     String jvmArgs
 
     /**
+     * JVM args to be used when starting/stopping containers.
+     */
+    @Input
+    @Optional
+    String jvmStartArgs
+
+    /**
      * The container's installation home directory.
      */
     @Optional
@@ -185,7 +192,11 @@ class LocalCargoContainerTask extends AbstractCargoContainerTask {
                 property(name: AbstractCargoContainerTask.CARGO_SERVLET_PORT, value: getPort())
 
                 if(getJvmArgs()) {
-                    ant.property(name: 'cargo.start.jvmargs', value: getJvmArgs())
+                    ant.property(name: 'cargo.jvmargs', value: getJvmArgs())
+                }
+
+                if(getJvmStartArgs()) {
+                    ant.property(name: 'cargo.start.jvmargs', value: getJvmStartArgs())
                 }
 
                 if(getLogLevel()) {

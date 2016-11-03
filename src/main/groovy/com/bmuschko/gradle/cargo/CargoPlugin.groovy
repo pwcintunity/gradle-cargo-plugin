@@ -58,6 +58,7 @@ class CargoPlugin implements Plugin<Project> {
     private void configureLocalContainerConventionMapping(Project project, CargoPluginExtension cargoPluginExtension) {
         project.tasks.withType(LocalCargoContainerTask) {
             conventionMapping.map('jvmArgs') { cargoPluginExtension.local.jvmArgs }
+            conventionMapping.map('jvmStartArgs') { cargoPluginExtension.local.jvmStartArgs }
             conventionMapping.map('logLevel') { cargoPluginExtension.local.logLevel }
             conventionMapping.map('homeDir') { cargoPluginExtension.local.homeDir }
             conventionMapping.map('configType') { cargoPluginExtension.local.configType }
